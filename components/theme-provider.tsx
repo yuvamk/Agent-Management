@@ -2,10 +2,8 @@
 
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { ThemeProviderProps } from 'next-themes'
 
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+// Use React.PropsWithChildren for the component props
+export function ThemeProvider({ children, ...props }: React.PropsWithChildren<any>) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
-
